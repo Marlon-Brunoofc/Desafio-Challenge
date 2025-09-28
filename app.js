@@ -37,7 +37,6 @@ function atualizarListaAmigos() {
     lista.appendChild(itemLista);
   }
 }
-
 // Função para sortear um amigo aleatoriamente
 function sortearAmigo() {
   // Valida se há amigos disponíveis no array
@@ -56,3 +55,10 @@ function sortearAmigo() {
   let resultado = document.getElementById("resultado");
   resultado.innerHTML = `<li>Amigo sorteado: <strong>${nomeSorteado}</strong></li>`;
 }
+ // Função para reiniciar a lista de amigos e o resultado
+function reiniciar() {
+  amigos = [];
+  atualizarListaAmigos();
+  document.getElementById("resultado").innerHTML = "";
+}
+
